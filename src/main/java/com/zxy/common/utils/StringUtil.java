@@ -1,6 +1,7 @@
 package com.zxy.common.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.Random;
 
 /**
@@ -116,5 +117,20 @@ public class StringUtil {
 		return str;
 	}
 
+	/**
+	 * 功能说明：实现判断传入的字符串是否为包含http的url地址
+	 */
+	public static boolean isHttpUrl(String src){
+		try {
+			URL url = new URL(src);
+			url.openStream();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//System.out.println("不是合法的url");
+		return false;
+	
+	}
 
 }

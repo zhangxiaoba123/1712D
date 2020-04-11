@@ -65,5 +65,17 @@ public class StringUtilTest {
 		String string = StringUtil.generateChineseName();
 		System.out.println(string);
 	}
+	@Test
+	public void testUrl() {
+		//String url ="https://www.baidu.com/";
+		String url ="adfsdfdsfsa";
+		boolean b = StringUtil.isHttpUrl(url);
+		if(b)
+		System.out.println("url合法");
+		else 
+		System.out.println("url不合法");	
+		
+		
+	}
 
 }
