@@ -1,6 +1,5 @@
 package com.zxy.common.utils;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
@@ -11,6 +10,10 @@ public class CollectionUtilTest {
 	@Test
 	public void testIsEmpty() {
 	
+		ArrayList<Object> list = new ArrayList<Object>();
+		
+		boolean b = CollectionUtil.isEmpty(list);
+		System.out.println(b);
 	}
 
 }
